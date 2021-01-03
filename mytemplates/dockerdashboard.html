@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Dashboard</title>
+    <style>
+#dockerdb {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#dockerdb td, #dockerdb th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#dockerdb tr:nth-child(even){background-color: #f2f2f2;}
+
+#dockerdb tr:hover {background-color: #ddd;}
+
+#dockerdb th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<center><h1> Docker Dashboard</h1>  </center>
+
+
+<h1> Docker Images</h1>
+
+<table id="dockerdb">
+  <tr>
+    <th>REPOSITORY</th>
+    <th>TAG</th>
+    <th>IMAGE ID</th>
+    <th>CREATED</th>
+    <th>SIZE</th>
+  </tr>
+
+    {% for item in images %}
+  <tr>
+    {% for doc in item %}
+
+        <td>{{doc}}</td>
+
+    {% endfor%}
+    </tr>
+    {% endfor%}
+</table>
+
+
+<h1> Running Containers</h1>
+
+<table id="dockerdb">
+  <tr>
+    <th>CONTAINER ID</th>
+    <th>IMAGE</th>
+    <th>COMMAND</th>
+    <th>CREATED</th>
+    <th>STATUS</th>
+    <th>PORTS</th>
+    <th>NAMES</th>
+  </tr>
+
+    {% for item in runningcontainers %}
+   <tr>
+    {% for doc in item %}
+
+        <td>{{doc}}</td>
+
+
+    {% endfor%}
+          </tr>
+    {% endfor%}
+</table>
+
+<h1> All Containers</h1>
+
+<table id="dockerdb">
+  <tr>
+    <th>CONTAINER ID</th>
+    <th>IMAGE</th>
+    <th>COMMAND</th>
+    <th>CREATED</th>
+    <th>STATUS</th>
+    <th>PORTS</th>
+    <th>NAMES</th>
+  </tr>
+
+    {% for item in allcontainers %}
+  <tr>
+    {% for doc in item %}
+
+        <td>{{doc}}</td>
+
+    {% endfor%}
+       </tr>
+    {% endfor%}
+</table>
+
+</body>
+</html>
