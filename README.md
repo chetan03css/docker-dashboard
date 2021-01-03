@@ -1,19 +1,19 @@
 # docker-dashboard
 
-##Project Description
+## Project Description
 
-###Author : Chetan SH
+### Author : Chetan SH
 
-###Project Name : Docker Dashboard 
+### Project Name : Docker Dashboard 
 
-###Version : 1.2.0
+### Version : 1.2.0
 
-###Purpose
+### Purpose
 This project is called Docker Dashboard, because it displays
 the status of docker images,running containers and all available containers
 from the system.
 
-###Usage
+### Usage
 
 1. Run the django server
 2. Open the project workspace in terminal
@@ -32,4 +32,4 @@ from the system.
 
 
 ### Please do help in the code improvement, if you think it needs some.
-#Thank You Very Much
+# Thank You Very Much
