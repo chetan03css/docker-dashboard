@@ -1,9 +1,13 @@
-# devops-python
+# docker-dashboard
 
 ##Project Description
+
 ###Author : Chetan SH
+
 ###Project Name : Docker Dashboard 
+
 ###Version : 1.2.0
+
 ###Purpose
 This project is called Docker Dashboard, because it displays
 the status of docker images,running containers and all available containers
